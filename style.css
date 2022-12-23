@@ -233,6 +233,8 @@ body {
   display: flex;
   margin: auto;
   padding: 20px;
+  background-color: white;
+  color: black;
 }
 .wanted h1 {
   font-size: 5vh;
@@ -263,6 +265,32 @@ body {
   padding: 5px;
   border: 2px solid rgb(28, 8, 51);
   border-radius: 100%;
+}
+.quick-links {
+  padding-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+.quick-links a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  border: 2px solid rgb(28, 8, 51);
+  box-shadow: 0px 10px 10px -4px #222;
+  transition: 0.4s;
+  border-radius: 15px;
+}
+.quick-links a:hover {
+  background-color: rgb(28, 8, 51);
+  transform: translateY(-5px);
+  color: white;
 }
 /* .main {
   width: 70%;
@@ -441,6 +469,13 @@ body {
     width: 120px;
     float: right;
     margin-top: 15px;
+  }
+  .we {
+    padding: 0px;
+  }
+  .you {
+    padding: 0px;
+    gap: 10px;
   }
 }
 /* @media screen and (max-width: 1300px) {
