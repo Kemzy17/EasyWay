@@ -12,95 +12,9 @@ body {
   background-attachment: fixed;
   color: white;
 }
-/* nav {
-  display: flex;
-
-  justify-content: space-between;
-  width: 95%;
-  margin: auto;
+html {
+  scroll-behavior: smooth;
 }
-.head {
-  display: flex;
-  align-items: center;
-}
-.link {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  text-decoration: none;
-  color: rgb(20, 3, 39);
-  border: 1px solid rgb(33, 12, 56);
-  width: 100px;
-  padding: 5px;
-  transition: 0.5s;
-}
-.link:hover {
-  background-color: rgb(20, 3, 39);
-  border-radius: 10px;
-}
-.link:hover .link-text {
-  color: white;
-}
-.links i {
-  transition: 0.5s;
-}
-.link:hover i {
-  color: white;
-}
-.links {
-  display: flex;
-  gap: 10px;
-}
-.link-text {
-  transition: 0.5s;
-}
-#open {
-  font-size: 30px;
-  display: none;
-}
-@media screen and (max-width: 1200px) {
-  nav {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    justify-content: center;
-    width: 95%;
-  }
-  .head {
-    justify-content: space-between;
-    padding: 20px;
-  }
-  .links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    margin: auto;
-    text-align: center;
-    gap: 10px;
-  }
-  .link i {
-    padding-right: 20px;
-    font-size: 30px;
-  }
-  .link {
-    display: flex;
-    flex-direction: row;
-    width: 95%;
-    align-items: center;
- 
-    justify-content: center;
-    padding: 10px;
-    text-align: center;
-  }
-  .link-text {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-  }
-  #open {
-    display: flex;
-  }
-} */
 
 .navbar {
   display: flex;
@@ -275,7 +189,6 @@ body {
 }
 .quick-links a {
   font-weight: 900;
-
   text-decoration: none;
   color: black;
   display: flex;
@@ -300,89 +213,72 @@ body {
   display: flex;
   margin: auto;
   padding: 20px;
-  background-color: rebeccapurple;
+  /* background-color: rebeccapurple; */
 }
 .referal-sec {
   width: 100%;
+  margin-top: 30px;
 }
 .join {
   text-align: center;
 }
-/* .main {
-  width: 70%;
+.refer {
+  padding-top: 20px;
   display: flex;
-  margin: auto;
-  margin-inline: auto;
+  justify-content: space-between;
 }
-.main-body {
-  width: 100%;
+.ref-img {
+  width: 50%;
+  height: 300px;
 }
-.main-text {
-  padding-top: 15px;
-}
-.featured {
-  border: 2px solid rgb(28, 8, 51);
-  width: 100%;
-  padding: 15px;
-  position: relative;
-}
-.features {
-  width: 100%;
+.one {
   display: flex;
-  gap: 30px;
+  align-items: center;
+  gap: 13px;
 }
-.feature-text {
-  font-size: 30px;
-  font-weight: 800;
-  padding-top: 30px;
-}
-.feature1 {
-  width: 60%;
-  overflow: hidden;
-  overflow-y: hidden;
-  overflow-x: hidden;
-}
-.feature1 img {
-  width: 700px;
-  transition: 0.4s;
-  z-index: 2;
-}
-.feature1 img:hover {
-  transform: scale(1.1, 1.1);
-}
-.feature2 {
-  width: 300px;
-  overflow: hidden;
-}
-.feature2 img {
-  width: 140%;
-  height: 340px;
-  transition: 0.4s;
-  z-index: 1;
+.one span {
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  height: 5px;
+  width: 5px;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.feature1 img:hover {
-  transform: scale(1.1, 1.1);
+.steps {
+  padding-left: 38px;
 }
-.see-all {
-  text-decoration: none;
-  border: 2px solid rgb(28, 8, 51);
-  color: rgb(28, 8, 51);
-  height: 30px;
-  width: 150px;
+.refer-fin {
   display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+.refer-fin p {
+  text-align: center;
+  /* background-color: rebeccapurple; */
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+.click {
+  display: flex;
+  text-align: center;
   justify-content: center;
   align-items: center;
-  margin-right: 50px;
-  font-weight: 800;
-  letter-spacing: 1px;
+  text-decoration: none;
+  color: white;
+  width: 300px;
+  /* border: 3px solid #fff; */
+  height: 50px;
+  background-color: rgb(28, 8, 51);
+  margin: auto;
   transition: 0.4s;
 }
-.see-all:hover {
-  color: white;
-  background-color: rgb(28, 8, 51);
-  border-radius: 4px;
-} */
+.click:hover {
+  border-radius: 10px;
+  transform: scale(1.1, 1.1);
+}
+
 @media (max-width: 1150px) {
   .toggle-button {
     display: flex;
@@ -419,6 +315,23 @@ body {
   }
   .navbar-links.active {
     display: flex;
+  }
+  .how-refer {
+    margin-top: 20px;
+  }
+  .refer {
+    display: flex;
+    flex-direction: column;
+  }
+  .ref-img {
+    width: 100%;
+    height: 100%;
+  }
+  .one h1 {
+    font-size: 4vw;
+  }
+  .one span {
+    padding: 8px;
   }
   /* .link-text {
     font-weight: 800;
