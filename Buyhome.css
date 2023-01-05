@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto";
+  /* background: rgb(28, 8, 51, 0.7) url(abstract.png); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  background-blend-mode: darken;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(28, 8, 51);
+  color: white;
+  padding-right: 20px;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  box-shadow: 0px 8px 10px -5px #333;
+}
+.brand-title {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  font-weight: 700;
+  padding: 15px;
+}
+.brand-title a {
+  text-decoration: none;
+  color: white;
+}
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+  width: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: 0.4s;
+}
+.navbar-links li:hover i {
+  color: rgb(28, 8, 51);
+}
+.link-text {
+  font-weight: 500;
+  transition: 0.4s;
+}
+.navbar-links li:hover .link-text {
+  color: rgb(28, 8, 51);
+}
+.navbar-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 3px;
+  display: block;
+  transition: 0.4s;
+}
+.navbar-links li:hover {
+  background-color: #fff;
+  border-radius: 10px;
+  color: rgb(28, 8, 51);
+}
+.toggle-button {
+  position: absolute;
+  top: 1.85rem;
+  right: 3.3rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  color: white;
+  display: none;
+}
+.ondo-places {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  border: 1px solid rgb(28, 8, 51);
+  /* padding: 10px; */
+  border-radius: 10px;
+  padding: 10px;
+}
+.main {
+  width: 85%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  /* background-color: rebeccapurple; */
+}
+.state-head {
+  text-align: center;
+  margin-top: 40px;
+  display: flex;
+  height: 30px;
+  width: 100%;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  color: black;
+}
+.head-text {
+  color: white;
+  text-align: center;
+  background-color: rgb(28, 8, 51);
+  width: 80%;
+  margin-inline: auto;
+  padding: 5px;
+  margin-top: 15px;
+}
+
+.place {
+  width: 250px;
+  height: 200px;
+  position: relative;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  padding: 0px;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 5px 10px 0px #222;
+}
+.place-image {
+  width: 95%;
+  height: 95%;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.place-name {
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  /* top: 20%; */
+  top: 0px;
+  text-align: center;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  /* display: none; */
+  font-size: 30px;
+  transform: scale(0, 0);
+  transition: 0.4s;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+}
+.place:hover .place-name {
+  /* display: block; */
+  transform: scale(1, 1);
+  opacity: 1;
+}
+.place:hover .place-image {
+  filter: brightness(30%);
+}
+.pagnation {
+  display: flex;
+  justify-content: center;
+}
+.pagnation a {
+  color: black;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 20px;
+}
+.pagnation a:nth-child(1) {
+  /* color: #333; */
+  text-decoration: underline;
+}
+#myBtn {
+  /* height: 30px; */
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  top: 600px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: 0px solid red; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: transparent; /* Set a background color */
+  color: black; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 0px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 38px; /* Increase font size */
+  rotate: 180deg;
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+@media (max-width: 1150px) {
+  .toggle-button {
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    overflow-y: scroll;
+  }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links li {
+    width: 90%;
+    display: flex;
+    margin: auto;
+  }
+  .navbar-links li i {
+    font-size: 20px;
+  }
+  .navbar-links li a {
+    text-align: center;
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+    margin-inline: auto;
+    align-items: center;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+  .ondo-head {
+    width: 100%;
+    font-size: 20px;
+  }
+  .sub-main h1 {
+    font-size: 25px;
+  }
+  .ondo-head p {
+    font-size: 15px;
+  }
+  .ondo-head a {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .place {
+    width: 300px;
+    height: 300px;
+  }
+  .place-image {
+    height: 100%;
+    width: 100%;
+  }
+  .head-text {
+  }
+  .place-name {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+  .place-image {
+    filter: brightness(50%);
+  }
+}

@@ -6,11 +6,13 @@
 
 body {
   font-family: "Roboto";
-  background: url(abstract.png);
+  /* background-color: rgba(28, 8, 51, 0.874); */
+  background: rgb(28, 8, 51, 0.6) url(abstract.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  color: white;
+  color: #fff;
+  background-blend-mode: darken;
 }
 html {
   scroll-behavior: smooth;
@@ -88,9 +90,9 @@ html {
 .main {
   width: 75%;
   display: flex;
-  margin: 20px;
+  margin-top: 50px;
   margin-inline: auto;
-  border: 1px solid rgb(28, 8, 51);
+  border: 3px solid rgb(28, 8, 51);
 }
 .featured {
   /* padding: 20px; */
@@ -129,8 +131,9 @@ html {
 }
 .see-all:hover {
   /* color: rgb(28, 8, 51); */
-  background-color: rgb(28, 8, 51);
+  background-color: white;
   border-radius: 10px;
+  color: black;
 }
 .main-text {
   /* max-width: 400px; */
@@ -226,6 +229,7 @@ html {
   padding-top: 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .ref-img {
   width: 50%;
@@ -266,17 +270,93 @@ html {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: white;
+  color: rgb(28, 8, 51);
   width: 300px;
   /* border: 3px solid #fff; */
   height: 50px;
-  background-color: rgb(28, 8, 51);
+  background-color: white;
   margin: auto;
   transition: 0.4s;
 }
 .click:hover {
   border-radius: 10px;
-  transform: scale(1.1, 1.1);
+  transform: scale(1.05, 1.05);
+  /* background-color: rgb(28, 8, 51); */
+  color: rgb(28, 8, 51);
+  /* border: 3px solid rgb(28, 8, 51); */
+}
+.testimonies {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.testimonials {
+  width: 75%;
+  display: flex;
+  margin: auto;
+  border: 2px solid rgb(28, 8, 51);
+  padding: 20px;
+}
+.testimonials-sub {
+  width: 100%;
+}
+.text {
+  font-size: 30px;
+  text-align: center;
+  /* margin-inline: auto; */
+  display: flex;
+  margin: auto;
+  /* background-color: red; */
+  justify-content: center;
+}
+.testimony1 {
+  width: 250px;
+  /* border: 2px solid white; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+.testimony-image {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+.testimony-image img {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+.testimony-name {
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+#myBtn {
+  /* height: 30px; */
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  top: 600px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: 0px solid red; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: transparent; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 0px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 38px; /* Increase font size */
+  rotate: 180deg;
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
 }
 
 @media (max-width: 1150px) {
@@ -333,24 +413,6 @@ html {
   .one span {
     padding: 8px;
   }
-  /* .link-text {
-    font-weight: 800;
-  }
-  .head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .features {
-    display: flex;
-    flex-direction: column;
-  }
-  .feature1 {
-    width: 100%;
-  }
-  .feature1 img {
-    max-width: 100%;
-  } */
 }
 
 @media screen and (max-width: 750px) {
@@ -405,6 +467,9 @@ html {
   .you {
     padding: 0px;
     gap: 10px;
+  }
+  .click {
+    width: 250px;
   }
 }
 /* @media screen and (max-width: 1300px) {
