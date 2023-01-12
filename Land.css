@@ -483,7 +483,7 @@ select {
 }
 @media (max-width: 550px) {
   .main {
-    width: 90%;
+    width: 85%;
   }
   .location {
     width: 18px;
